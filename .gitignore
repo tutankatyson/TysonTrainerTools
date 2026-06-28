@@ -41,3 +41,22 @@ example
 # generated native folders
 /ios
 /android
+
+# EAS
+.eas/
+
+# Builds
+*.apk
+*.aab
+*.ipa
+
+# Logs
+*.log
+
+# Variables de entorno
+.env
+.env.local
+.env.production
+
+# VS Code
+.vscode/settings.json
