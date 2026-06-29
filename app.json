@@ -33,35 +33,19 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": [
-      "expo-router",
-      "expo-camera",
-      "expo-media-library",
-      [
-        "expo-screen-orientation",
-        {
-          "initialOrientation": "PORTRAIT"
-        }
-      ],
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/images/icon.png",
-          "color": "#208AEF"
-        }
-      ],
-      [
-        "expo-splash-screen",
-        {
-          "backgroundColor": "#208AEF",
-          "android": {
-            "image": "./assets/images/splash-icon.png",
-            "imageWidth": 76
+      "plugins": [
+        "expo-router",
+        [
+          "expo-splash-screen",
+          {
+            "backgroundColor": "#208AEF",
+            "android": {
+              "image": "./assets/images/splash-icon.png",
+              "imageWidth": 76
+            }
           }
-        }
+        ]
       ],
-      "expo-sharing"
-    ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
