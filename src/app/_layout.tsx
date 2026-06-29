@@ -1,15 +1,29 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
+import { EjerciciosProvider } from '@/ejercicios-context';
+import { FotosProvider } from '@/fotos-context';
+import { HistorialProvider } from '@/historial-context';
+import { TablasProvider } from '@/tablas-context';
+import { DarkTheme, DefaultTheme, Tabs, ThemeProvider } from 'expo-router';
 import { useColorScheme } from 'react-native';
-
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <EjerciciosProvider>
+      <TablasProvider>
+        <HistorialProvider>
+          <FotosProvider>
+            <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+              <Tabs>
+                <Tabs.Screen name="index" options={{ title: 'Inicio' }} />
+                <Tabs.Screen name="ejercicios" options={{ title: 'Ejercicios' }} />
+                <Tabs.Screen name="tablas" options={{ title: 'Tablas' }} />
+                <Tabs.Screen name="historial" options={{ title: 'Historial' }} />
+                <Tabs.Screen name="fotos" options={{ title: 'Fotos' }} />
+              </Tabs>
+            </ThemeProvider>
+          </FotosProvider>
+        </HistorialProvider>
+      </TablasProvider>
+    </EjerciciosProvider>
   );
 }
