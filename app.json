@@ -35,6 +35,21 @@
     },
     "plugins": [
       "expo-router",
+      "expo-camera",
+      "expo-media-library",
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "PORTRAIT"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#208AEF"
+        }
+      ],
       [
         "expo-splash-screen",
         {
