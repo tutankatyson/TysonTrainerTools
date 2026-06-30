@@ -1,6 +1,6 @@
+import ejerciciosBase from '@/data/ejercicios-base.json';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createContext, useContext, useEffect, useState } from 'react';
-import ejerciciosBase from '@/datos/ejercicios-base.json';
 
 export type EjercicioBiblioteca = {
   id: number;
@@ -36,10 +36,11 @@ const EjerciciosContext = createContext<EjerciciosContextType | null>(null);
 export function EjerciciosProvider({ children }: { children: React.ReactNode }) {
   const [ejercicios, setEjercicios] = useState<EjercicioBiblioteca[]>([]);
   const [grupos, setGrupos] = useState<GrupoMuscular[]>([]);
+  const [cargado, setCargado] = useState(false);
 
   // Cargar datos
   useEffect(() => {
-async function cargar() {
+    async function cargar() {
       try {
         const ej = await AsyncStorage.getItem('ejercicios_biblioteca');
         const gr = await AsyncStorage.getItem('grupos_musculares');
@@ -47,14 +48,12 @@ async function cargar() {
         if (gr) {
           setGrupos(JSON.parse(gr));
         } else {
-          // Cargar grupos base si no hay datos del usuario
           setGrupos(ejerciciosBase.grupos);
         }
 
         if (ej) {
           setEjercicios(JSON.parse(ej));
         } else {
-          // Cargar ejercicios base si no hay datos del usuario
           setEjercicios(ejerciciosBase.ejercicios);
         }
       } catch (e) {
@@ -63,10 +62,10 @@ async function cargar() {
         setCargado(true);
       }
     }
+    cargar();
+  }, []);
 
-// Guardar ejercicios
-  const [cargado, setCargado] = useState(false);
-
+  // Guardar ejercicios
   useEffect(() => {
     if (!cargado) return;
     AsyncStorage.setItem('ejercicios_biblioteca', JSON.stringify(ejercicios));

@@ -1,15 +1,3 @@
-/******************************************************************************/
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   index.tsx                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Tutankatyson <j.s.vergara@hotmail.com>     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/10 23:46:26 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/30 00:33:24 by Tutankatyso      ###   ########.fr       */
-/*                                                                            */
-/******************************************************************************/
-
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
@@ -20,7 +8,7 @@ export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView>
-        <ThemedText type="title">💪 TysonTrainer</ThemedText>
+        <ThemedText type="title">💪 TysonTrainer_V1.0</ThemedText>
         <ThemedText>Bienvenido a tu app de ejercicios</ThemedText>
       </SafeAreaView>
     </ThemedView>

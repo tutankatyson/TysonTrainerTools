@@ -32,8 +32,7 @@
       "id": 8,
       "nombre": "Piernas"
     }
-
-  ],
+    ],
   "ejercicios": [
     {
       "id": 1,
@@ -86,7 +85,7 @@
       "peso": "20",
       "temporizador": false,
       "imagen": ""
-},
+    },
     {
       "id": 5,
       "nombre": "Flexiones normal",
@@ -99,7 +98,7 @@
       "peso": "",
       "temporizador": false,
       "imagen": ""
-      },
+    },
     {
       "id": 6,
       "nombre": "Flesiones triánculo",
@@ -112,7 +111,7 @@
       "peso": "",
       "temporizador": false,
       "imagen": ""
-      },
+    },
     {
       "id": 7,
       "nombre": "Levantamiento poleas",
@@ -125,7 +124,7 @@
       "peso": "12",
       "temporizador": false,
       "imagen": ""
-      },
+    },
     {
       "id": 8,
       "nombre": "Abrazo poleas",
@@ -137,7 +136,8 @@
       "descanso": "60",
       "peso": "25",
       "temporizador": false,
-      "imagen": ""},
+      "imagen": ""
+    },
     {
       "id": 9,
       "nombre": "Fondos paralelas",
@@ -150,7 +150,7 @@
       "peso": "",
       "temporizador": false,
       "imagen": ""
-      },
+    },
     {
       "id": 10,
       "nombre": "Flexiones TRX apertura",
@@ -163,10 +163,6 @@
       "peso": "",
       "temporizador": false,
       "imagen": ""
-
-
-
-
     }
   ]
 }
