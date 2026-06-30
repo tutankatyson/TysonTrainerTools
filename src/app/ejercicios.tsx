@@ -1,3 +1,15 @@
+/******************************************************************************/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ejercicios.tsx                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Tutankatyson <j.s.vergara@hotmail.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/30 00:24:29 by Tutankatyso       #+#    #+#             */
+/*   Updated: 2026/06/30 00:24:44 by Tutankatyso      ###   ########.fr       */
+/*                                                                            */
+/******************************************************************************/
+
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { useEjercicios } from '@/ejercicios-context';

@@ -1,0 +1,172 @@
+{
+  "grupos": [
+    {
+      "id": 1,
+      "nombre": "Cardio"
+    },
+    {
+      "id": 2,
+      "nombre": "Espalda"
+    },
+    {
+      "id": 3,
+      "nombre": "Pecho"
+    },
+    {
+      "id": 4,
+      "nombre": "Biceps"
+    },
+    {
+      "id": 5,
+      "nombre": "Triceps"
+    },
+    {
+      "id": 6,
+      "nombre": "Hombros"
+    },
+    {
+      "id": 7,
+      "nombre": "Abdominales"
+    },
+    {
+      "id": 8,
+      "nombre": "Piernas"
+    }
+
+  ],
+  "ejercicios": [
+    {
+      "id": 1,
+      "nombre": "Press banca",
+      "grupoMuscular": "Pecho",
+      "tipo": "pesas",
+      "descripcion": "Tumbado en el banco, bajar la barra hasta el pecho y empujar hacia arriba.",
+      "series": "3",
+      "repeticiones": "10",
+      "descanso": "90",
+      "peso": "50",
+      "temporizador": false,
+      "imagen": ""
+    },
+    {
+      "id": 2,
+      "nombre": "Dominadas",
+      "grupoMuscular": "Espalda",
+      "tipo": "calistenia",
+      "descripcion": "Colgado de la barra, con ayuda de un elastico, subir hasta que la barbilla supere la barra.",
+      "series": "3",
+      "repeticiones": "6",
+      "descanso": "120",
+      "peso": "",
+      "temporizador": false,
+      "imagen": ""
+    },
+    {
+      "id": 3,
+      "nombre": "Mancuernas apertura de pecho",
+      "grupoMuscular": "Pecho",
+      "tipo": "pesas",
+      "descripcion": "En banco, con dos mancuernas aperturas lentas y controladas",
+      "series": "3",
+      "repeticiones": "8",
+      "descanso": "60",
+      "peso": "12",
+      "temporizador": false,
+      "imagen": ""
+    },
+    {
+      "id": 4,
+      "nombre": "Pull over",
+      "grupoMuscular": "Pecho",
+      "tipo": "pesas",
+      "descripcion": "Tumbado en banco con la cabeza al borde, sujetando una mancuerna o disco con ambas manos",
+      "series": "3",
+      "repeticiones": "12",
+      "descanso": "45",
+      "peso": "20",
+      "temporizador": false,
+      "imagen": ""
+},
+    {
+      "id": 5,
+      "nombre": "Flexiones normal",
+      "grupoMuscular": "Pecho",
+      "tipo": "calistenia",
+      "descripcion": "Flexiones en suelo, manos a la altura de los hombros",
+      "series": "3",
+      "repeticiones": "8",
+      "descanso": "60",
+      "peso": "",
+      "temporizador": false,
+      "imagen": ""
+      },
+    {
+      "id": 6,
+      "nombre": "Flesiones triánculo",
+      "grupoMuscular": "Pecho",
+      "tipo": "calistenia",
+      "descripcion": "Flexiones en suelo con manos en triangulo a la altura del esternon",
+      "series": "3",
+      "repeticiones": "6",
+      "descanso": "60",
+      "peso": "",
+      "temporizador": false,
+      "imagen": ""
+      },
+    {
+      "id": 7,
+      "nombre": "Levantamiento poleas",
+      "grupoMuscular": "Pecho",
+      "tipo": "pesas",
+      "descripcion": "Con poleas o mancuernas, brazos casis estendidos, espalda ligeramente inclinada hacia adelante levantar el peso haciendo el máximo arco de hombro",
+      "series": "3",
+      "repeticiones": "8",
+      "descanso": "60",
+      "peso": "12",
+      "temporizador": false,
+      "imagen": ""
+      },
+    {
+      "id": 8,
+      "nombre": "Abrazo poleas",
+      "grupoMuscular": "Pecho",
+      "tipo": "pesas",
+      "descripcion": "",
+      "series": "3",
+      "repeticiones": "10",
+      "descanso": "60",
+      "peso": "25",
+      "temporizador": false,
+      "imagen": ""},
+    {
+      "id": 9,
+      "nombre": "Fondos paralelas",
+      "grupoMuscular": "Pecho",
+      "tipo": "calistenia",
+      "descripcion": "En barras paralelas, con ayuda del elastico bajar hasta poner el codo a 90º",
+      "series": "3",
+      "repeticiones": "4",
+      "descanso": "60",
+      "peso": "",
+      "temporizador": false,
+      "imagen": ""
+      },
+    {
+      "id": 10,
+      "nombre": "Flexiones TRX apertura",
+      "grupoMuscular": "Pecho",
+      "tipo": "calistenia",
+      "descripcion": "Con anillas o TRX en posicion de flexiones realizar apertura de pecho.",
+      "series": "3",
+      "repeticiones": "6",
+      "descanso": "60",
+      "peso": "",
+      "temporizador": false,
+      "imagen": ""
+
+
+
+
+    }
+  ]
+}

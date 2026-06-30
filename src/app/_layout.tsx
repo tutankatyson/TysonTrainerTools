@@ -1,3 +1,5 @@
+
+
 import { EjerciciosProvider } from '@/ejercicios-context';
 import { FotosProvider } from '@/fotos-context';
 import { HistorialProvider } from '@/historial-context';
@@ -19,6 +21,10 @@ export default function TabLayout() {
                 <Tabs.Screen name="tablas" options={{ title: 'Tablas' }} />
                 <Tabs.Screen name="historial" options={{ title: 'Historial' }} />
                 <Tabs.Screen name="fotos" options={{ title: 'Fotos' }} />
+                <Tabs.Screen name="gestionar-tabla" options={{ href: null }} />
+                <Tabs.Screen name="entrenar" options={{ href: null }} />
+                <Tabs.Screen name="editar-tabla" options={{ href: null }} />
+                <Tabs.Screen name="nueva-tabla" options={{ href: null }} />
               </Tabs>
             </ThemeProvider>
           </FotosProvider>

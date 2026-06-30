@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   index.tsx                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: Tutankatyson <j.s.vergara@hotmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 23:46:26 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/10 23:46:27 by marvin           ###   ########.fr       */
+/*   Updated: 2026/06/30 00:33:24 by Tutankatyso      ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -20,7 +20,7 @@ export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView>
-        <ThemedText type="title">💪 FitnessApp</ThemedText>
+        <ThemedText type="title">💪 TysonTrainer</ThemedText>
         <ThemedText>Bienvenido a tu app de ejercicios</ThemedText>
       </SafeAreaView>
     </ThemedView>
