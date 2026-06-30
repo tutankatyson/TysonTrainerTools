@@ -1,0 +1,68 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    TODO.txt                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: Tutankatyson <j.s.vergara@hotmail.com>     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/06/30 15:21:17 by Tutankatyso       #+#    #+#              #
+#    Updated: 2026/06/30 15:21:17 by Tutankatyso      ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+* - * - * - * -   A l c a l n c e  - * - * - * - * - * - *
+
+- Modo Runing
+    Trackeo de ruta por gps
+    Medicion de velocidad (max, min, promedio)
+    historial de rutas y tiempos
+    modo training. 
+        Posibilidad de predefinir rutas
+        Posibilidad de marcar ritmo en zonas de la ruta (Sprint, normal, recuperacion...)
+        Durante la carrera te marca el ritmo a seguir en cada zonas
+
+- Modo foto diaria
+    Realiza ua foto, pregunta por el peso
+    guarda un historico de fotos y peso, ordenado cronologicamente
+    posibilidad de incluir un time lapse
+
+- Visual
+    Temporizador con barra vertical que se va llenando con el paso del tiempo
+    Imagenes o gifts de ejercicios (Fotos reales ? ilustraciones creadas con ia)
+
+- Ajuste automático de dificultad
+    Ajusta el peso, nº de series o repeticiones automaticamente siguiendo un algoritmo de varios a elegir.
+    Ejemplo:
+        Algoritmo perdida de grasa:
+            Incrementa el tiempo de los ejercicios de cardio un 5% por cada 3 valoraciones positivas del ejercicios
+            La relacion 5%-3ok Se puede ajustar
+            Igualmente si hay dos pulgares hacia abajo seguidos en un ejercicio le baja un 5% el tiempo
+
+- Wiki
+    Apartado donde usuarios puedan subir sus rutinas personalizadas
+    Ademas pueden consultar rutinas y ejercicios de otroas ususarios
+    Pueden valorar, anotarse a desafios que lance el creador y más
+
+- Seccion nutricion y wikinutri
+
+
+* - * - * - * - * - * - * -   T o   f i x   - * - * - * - * - * - * - * - 
+
+- Formato visual no cuadra bien en el movil
+    las fuentes son demasiado grandes
+
+- añadir iconos a los botones de cambio de modo
+
+- Revisar sistema de puntuaciones
+    Funciona cuando me salto un temporizador?
+
+- Aleatorizar las rotaciones de ejercicios o crear subgrupos musculares
+
+* - * - * - * - * - * -   B r a n c h e s   - * - * - * - * - * - * - 
+
+- Crear ilustraciones
+
+- Estetica de la aplicacion
+    Logotipo
+    Colores corporativos
+

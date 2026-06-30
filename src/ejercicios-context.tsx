@@ -77,7 +77,7 @@ export function EjerciciosProvider({ children }: { children: React.ReactNode }) 
   }, [grupos]);
 
   function añadirEjercicio(ejercicio: Omit<EjercicioBiblioteca, 'id'>) {
-    setEjercicios(prev => [...prev, { ...ejercicio, id: Date.now() }]);
+    setEjercicios(prev => [{ ...ejercicio, id: Date.now() }, ...prev]);
   }
 
   function editarEjercicio(id: number, ejercicio: Omit<EjercicioBiblioteca, 'id'>) {
