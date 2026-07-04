@@ -8,7 +8,7 @@ export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView>
-        <ThemedText type="title">💪 TysonTrainer_V1.0</ThemedText>
+        <ThemedText type="title">💪 TysonTrainer_V1.1</ThemedText>
         <ThemedText>Bienvenido a tu app de ejercicios</ThemedText>
       </SafeAreaView>
     </ThemedView>

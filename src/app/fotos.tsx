@@ -4,7 +4,7 @@ import { useFotos } from '@/fotos-context';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import * as MediaLibrary from 'expo-media-library';
 import { useRef, useState } from 'react';
-import { Dimensions, Image, ScrollView, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
+import { Dimensions, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const { width } = Dimensions.get('window');
@@ -21,6 +21,7 @@ export default function FotosScreen() {
   const [permisoCamera, requestPermisoCamera] = useCameraPermissions();
   const [permisoMedia, requestPermisoMedia] = MediaLibrary.usePermissions();
   const cameraRef = useRef(null);
+  const [camara, setCamara] = useState<'front' | 'back'>('back');
 
   async function abrirCamara() {
     if (!permisoCamera?.granted) {
@@ -53,7 +54,7 @@ export default function FotosScreen() {
   if (modo === 'camara') {
     return (
       <View style={styles.cameraContainer}>
-        <CameraView ref={cameraRef} style={styles.camera} facing="front" />
+        <CameraView ref={cameraRef} style={styles.camera} facing={camara} />
         <View style={styles.cameraControles}>
           <TouchableOpacity style={styles.botonCancelarCamera} onPress={() => setModo('inicio')}>
             <ThemedText style={styles.botonTextoBlanco}>✕ Cancelar</ThemedText>
@@ -61,7 +62,9 @@ export default function FotosScreen() {
           <TouchableOpacity style={styles.botonCaptura} onPress={hacerFoto}>
             <View style={styles.botonCapturaInner} />
           </TouchableOpacity>
-          <View style={{ width: 80 }} />
+          <TouchableOpacity style={styles.botonCancelarCamera} onPress={() => setCamara(c => c === 'back' ? 'front' : 'back')}>
+            <ThemedText style={styles.botonTextoBlanco}>🔄 Voltear</ThemedText>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -120,10 +123,10 @@ export default function FotosScreen() {
             {fotosOrdenadas.map((foto) => (
               <View key={foto.id} style={styles.fotoSlide}>
                 <Image source={{ uri: foto.uri }} style={styles.fotoGaleria} />
-                <ThemedView style={styles.fotoInfo}>
-                  <ThemedText style={styles.fotoFecha}>📅 {foto.fecha}</ThemedText>
+                  <View style={styles.fotoInfo}>
+                  <Text style={styles.fotoFecha}>📅 {foto.fecha}</Text>
                   {foto.peso ? (
-                    <ThemedText style={styles.fotoPeso}>⚖️ {foto.peso} kg</ThemedText>
+                    <Text style={styles.fotoPeso}>⚖️ {foto.peso} kg</Text>
                   ) : null}
                   <TouchableOpacity onPress={() => {
                     if (window.confirm('¿Borrar esta foto?')) {
@@ -132,7 +135,7 @@ export default function FotosScreen() {
                   }}>
                     <ThemedText style={styles.botonBorrar}>🗑️ Borrar</ThemedText>
                   </TouchableOpacity>
-                </ThemedView>
+                </View>
               </View>
             ))}
           </ScrollView>
@@ -207,9 +210,9 @@ const styles = StyleSheet.create({
   vacio: { opacity: 0.5, textAlign: 'center', marginTop: 32 },
   fotoSlide: { width, alignItems: 'center' },
   fotoGaleria: { width: width, height: width * 1.4, resizeMode: 'cover' },
-  fotoInfo: { padding: 16, gap: 8, width: '100%', alignItems: 'center' },
-  fotoFecha: { fontSize: 16, fontWeight: 'bold' },
-  fotoPeso: { fontSize: 16 },
+  fotoInfo: {position: 'absolute', bottom: 0, left: 0, right: 0, padding: 16, gap: 4, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center',},
+  fotoFecha: { fontSize: 16, fontWeight: 'bold', color: 'white' },
+  fotoPeso: { fontSize: 16, color: 'white' },
   botonBorrar: { color: '#ef4444', marginTop: 8 },
   indicadores: { flexDirection: 'row', justifyContent: 'center', gap: 6, padding: 12 },
   punto: { width: 8, height: 8, borderRadius: 4, backgroundColor: '#ccc' },

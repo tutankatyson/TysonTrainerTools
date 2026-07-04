@@ -58,11 +58,5 @@
 
 - Aleatorizar las rotaciones de ejercicios o crear subgrupos musculares
 
-* - * - * - * - * - * -   B r a n c h e s   - * - * - * - * - * - * - 
-
-- Crear ilustraciones
-
-- Estetica de la aplicacion
-    Logotipo
-    Colores corporativos
+- borrar fotos no funciona
 

@@ -44,6 +44,8 @@ export function EjerciciosProvider({ children }: { children: React.ReactNode }) 
       try {
         const ej = await AsyncStorage.getItem('ejercicios_biblioteca');
         const gr = await AsyncStorage.getItem('grupos_musculares');
+        const versionGuardada = await AsyncStorage.getItem('ejercicios_base_version');
+        const versionActual = ejerciciosBase.version;
 
         if (gr) {
           setGrupos(JSON.parse(gr));
@@ -51,10 +53,15 @@ export function EjerciciosProvider({ children }: { children: React.ReactNode }) 
           setGrupos(ejerciciosBase.grupos);
         }
 
-        if (ej) {
+        if (ej && versionGuardada && Number(versionGuardada) >= versionActual) {
+          // Versión actualizada, cargar datos del usuario
           setEjercicios(JSON.parse(ej));
         } else {
-          setEjercicios(ejerciciosBase.ejercicios);
+          // Versión nueva del JSON, fusionar ejercicios base con los del usuario
+          const ejerciciosUsuario = ej ? JSON.parse(ej).filter(e => e.id >= 1000) : [];
+          const ejerciciosFusionados = [...ejerciciosUsuario, ...ejerciciosBase.ejercicios];
+          setEjercicios(ejerciciosFusionados);
+          await AsyncStorage.setItem('ejercicios_base_version', String(versionActual));
         }
       } catch (e) {
         console.error('Error cargando ejercicios:', e);
