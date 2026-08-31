@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
-import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useRouter, useLocalSearchParams } from 'expo-router';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { useTablas } from '@/tablas-context';
 import { useEjercicios } from '@/ejercicios-context';
 import { useHistorial } from '@/historial-context';
+import { useTablas } from '@/tablas-context';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useEffect, useRef, useState } from 'react';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const TIPOS_EJERCICIO = [
   { id: 'calistenia', icono: '🤸' },
@@ -229,8 +229,6 @@ export default function EntrenarScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scroll}>
-
         <ThemedView style={styles.cabecera}>
           <TouchableOpacity onPress={() => router.back()}>
             <ThemedText style={styles.botonVolver}>← Volver</ThemedText>
@@ -282,17 +280,14 @@ export default function EntrenarScreen() {
         <TouchableOpacity style={styles.botonSaltar} onPress={saltarEjercicio}>
           <ThemedText style={styles.botonSaltarTexto}>⏭️ Saltar ejercicio</ThemedText>
         </TouchableOpacity>
-
-      </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
-  scroll: { padding: 16, gap: 16 },
+  container: { flex: 1, alignItems: 'stretch', justifyContent: 'space-between', backgroundColor: '#ffffff'},
   centrado: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16, padding: 16 },
-  cabecera: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  cabecera: { top: 1 ,flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' },
   botonVolver: { fontSize: 16, color: '#208AEF' },
   progreso: { opacity: 0.6 },
   ejercicioCard: { padding: 24, borderRadius: 16, alignItems: 'center', gap: 8 },
@@ -322,7 +317,7 @@ const styles = StyleSheet.create({
   botonTextoSecundario: { fontSize: 16, color: '#208AEF', fontWeight: 'bold' },
   botonSaltar: {
     borderWidth: 1, borderColor: '#ccc', padding: 12,
-    borderRadius: 12, alignItems: 'center', marginTop: 4,
+    borderRadius: 12, alignItems: 'center' , marginTop: 4,
   },
   botonSaltarTexto: { fontSize: 14, opacity: 0.6 },
 });

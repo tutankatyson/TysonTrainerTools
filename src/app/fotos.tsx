@@ -128,11 +128,7 @@ export default function FotosScreen() {
                   {foto.peso ? (
                     <Text style={styles.fotoPeso}>⚖️ {foto.peso} kg</Text>
                   ) : null}
-                  <TouchableOpacity onPress={() => {
-                    if (window.confirm('¿Borrar esta foto?')) {
-                      borrarFoto(foto.id);
-                    }
-                  }}>
+                  <TouchableOpacity onPress={() => borrarFoto(foto.id)}>
                     <ThemedText style={styles.botonBorrar}>🗑️ Borrar</ThemedText>
                   </TouchableOpacity>
                 </View>

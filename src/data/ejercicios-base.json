@@ -18,7 +18,7 @@
       "id": 1, "nombre": "Press banca","grupoMuscular": "Pecho","tipo": "pesas",
       "descripcion": "Tumbado en el banco, bajar la barra hasta el pecho y empujar hacia arriba.",
       "series": "3","repeticiones": "10","descanso": "90","peso": "50","temporizador": false,
-      "imagen": ""},
+      "imagen": "@/imagenes/press_de_banca.jpg"},
     {
       "id": 2, "nombre": "Dominadas", "grupoMuscular": "Espalda", "tipo": "calistenia",
       "descripcion": "Colgado de la barra, con ayuda de un elastico, subir hasta que la barbilla supere la barra.",

@@ -25,6 +25,7 @@ export default function TabLayout() {
                 <Tabs.Screen name="entrenar" options={{ href: null }} />
                 <Tabs.Screen name="editar-tabla" options={{ href: null }} />
                 <Tabs.Screen name="nueva-tabla" options={{ href: null }} />
+                <Tabs.Screen name="videos" options={{title: 'Videos', tabBarIcon: ({ color, size }) => (<Ionicons name="videocam" size={size} color={color} />),}}/>
               </Tabs>
             </ThemeProvider>
           </FotosProvider>
